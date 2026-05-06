@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FFFFFF;
+  --surface: #F8F9FA;
+  --surface-up: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.06);
+  --text-primary: #111111;
+  --text-secondary: #666666;
+  --text-dim: #999999;
+  --brand: #F59E0B;
+  --brand-glow: rgba(245, 158, 11, 0.1);
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0A0A0A;
+  --surface: #141414;
+  --surface-up: #1E1E1E;
+  --border: rgba(255, 255, 255, 0.08);
+  --text-primary: #EAEAEA;
+  --text-secondary: #A3A3A3;
+  --text-dim: #525252;
+  --brand: #F59E0B;
+  --brand-glow: rgba(245, 158, 11, 0.2);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar — thin, light */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #E9ECEF; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #D1D5DB; }
+
+button, input, textarea {
+  font: inherit;
+}
+
+.chat-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #E9ECEF transparent;
+}
+
+/* Modular entrance */
+@keyframes module-in {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+.module-in {
+  animation: module-in 0.4s cubic-bezier(0.2, 0.9, 0.3, 1.1) both;
+}
+
+/* Jarvis holographic grid */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 122, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 122, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Bubble entrance */
+@keyframes bubble-in {
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)   scale(1);    }
+}
+.bubble-in {
+  animation: bubble-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Checklist entrance */
+@keyframes checklist-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0);   }
+}
+.checklist-in {
+  animation: checklist-in 0.38s ease-out both;
+}
+
+/* Waveform animation for TTS */
+.waveform-bar {
+  animation: wave 1s ease-in-out infinite alternate;
+}
+@keyframes wave {
+  0% { height: 4px; }
+  100% { height: 16px; }
+}

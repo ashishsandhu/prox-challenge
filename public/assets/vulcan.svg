@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" width="100%" height="100%">
+  <style>
+    .panel { fill: #f8f9fa; stroke: #212529; stroke-width: 4; stroke-linejoin: round; }
+    .bezel { fill: #e9ecef; stroke: #212529; stroke-width: 3; stroke-linejoin: round; }
+    .element { fill: #ffffff; stroke: #212529; stroke-width: 2; stroke-linejoin: round; }
+    .dark-element { fill: #dee2e6; stroke: #212529; stroke-width: 2; }
+    .text-title { font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; fill: #212529; }
+    .text-accent { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #d4af37; }
+    .text-label { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #212529; }
+    .text-small { font-family: Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #212529; }
+    .text-screen { font-family: monospace; font-size: 28px; font-weight: bold; fill: #212529; }
+    .port-outer { fill: #ffffff; stroke: #212529; stroke-width: 3; }
+    .port-inner { fill: #f8f9fa; stroke: #d4af37; stroke-width: 3; }
+    .accent-line { stroke: #d4af37; stroke-width: 2; }
+    .symbol { font-family: Arial, sans-serif; font-size: 32px; font-weight: bold; fill: #212529; }
+  </style>
+
+  <rect x="50" y="50" width="700" height="600" rx="10" class="panel" />
+
+  <rect x="70" y="70" width="660" height="400" rx="20" class="bezel" />
+
+  <text x="400" y="115" text-anchor="middle" class="text-title">VULCAN <tspan class="text-accent">OmniPro 220</tspan></text>
+  <line x1="310" y1="125" x2="490" y2="125" class="element" stroke-width="3" />
+
+  <rect x="300" y="140" width="200" height="80" rx="5" class="element" />
+  <text x="375" y="175" class="text-screen">MIG</text>
+  <text x="375" y="205" class="text-screen">Steel C25</text>
+  <path d="M 320 200 L 335 185 L 360 185 M 335 185 L 340 190" fill="none" stroke="#212529" stroke-width="4" stroke-linecap="round" />
+
+  <rect x="230" y="155" width="40" height="40" rx="8" class="element" />
+  <text x="250" y="210" text-anchor="middle" class="text-small">HOME</text>
+
+  <rect x="530" y="155" width="40" height="40" rx="8" class="element" />
+  <text x="550" y="210" text-anchor="middle" class="text-small">BACK</text>
+
+  <rect x="310" y="235" width="180" height="30" rx="8" class="dark-element" />
+  <rect x="315" y="240" width="35" height="20" rx="3" class="element" />
+  <text x="332.5" y="254" text-anchor="middle" class="text-small" font-size="9px">MIG</text>
+  <rect x="355" y="240" width="35" height="20" rx="3" class="element" />
+  <text x="372.5" y="254" text-anchor="middle" class="text-small" font-size="9px">TIG</text>
+  <rect x="395" y="240" width="35" height="20" rx="3" class="element" />
+  <text x="412.5" y="254" text-anchor="middle" class="text-small" font-size="9px">Flux</text>
+  <rect x="435" y="240" width="35" height="20" rx="3" class="element" />
+  <text x="452.5" y="254" text-anchor="middle" class="text-small" font-size="9px">Stick</text>
+
+  <text x="250" y="310" text-anchor="middle" class="text-small">INDUCTANCE</text>
+  <circle cx="250" cy="350" r="25" class="dark-element" />
+  <circle cx="250" cy="350" r="18" class="element" />
+  <line x1="250" y1="350" x2="250" y2="335" stroke="#212529" stroke-width="3" stroke-linecap="round" />
+  <path d="M 230 365 A 30 30 0 0 1 270 365" fill="none" stroke="#212529" stroke-width="2" />
+  <polygon points="270,365 265,360 275,360" fill="#212529" />
+
+  <circle cx="380" cy="350" r="40" class="dark-element" />
+  <circle cx="380" cy="350" r="30" class="element" />
+  <line x1="380" y1="350" x2="380" y2="325" stroke="#212529" stroke-width="3" stroke-linecap="round" />
+  <text x="380" y="430" text-anchor="middle" class="text-label">WIRE SPEED / <tspan fill="#d4af37">AMPS</tspan></text>
+  <path d="M 345 375 A 45 45 0 1 1 415 375" fill="none" stroke="#212529" stroke-width="3" />
+  <polygon points="415,375 408,368 422,368" fill="#212529" />
+
+  <circle cx="530" cy="350" r="40" class="dark-element" />
+  <circle cx="530" cy="350" r="30" class="element" />
+  <line x1="530" y1="350" x2="530" y2="325" stroke="#212529" stroke-width="3" stroke-linecap="round" />
+  <text x="530" y="430" text-anchor="middle" class="text-label">VOLTAGE / <tspan fill="#d4af37">OUTPUT</tspan></text>
+  <path d="M 495 375 A 45 45 0 1 1 565 375" fill="none" stroke="#212529" stroke-width="3" />
+  <polygon points="565,375 558,368 572,368" fill="#212529" />
+
+  <text x="645" y="305" text-anchor="middle" class="text-small">ON</text>
+  <rect x="630" y="320" width="30" height="50" rx="3" class="element" />
+  <rect x="635" y="325" width="20" height="40" class="dark-element" />
+  <line x1="645" y1="332" x2="645" y2="340" stroke="#212529" stroke-width="2" />
+  <circle cx="645" cy="355" r="3" fill="none" stroke="#212529" stroke-width="2" />
+  <text x="645" y="395" text-anchor="middle" class="text-small">OFF</text>
+
+  <rect x="70" y="480" width="660" height="160" rx="10" class="bezel" />
+
+  <circle cx="210" cy="495" r="12" fill="#ffffff" stroke="#212529" stroke-width="2"/>
+  <text x="210" y="506" text-anchor="middle" class="symbol">-</text>
+  
+  <circle cx="250" cy="560" r="35" class="port-outer" />
+  <circle cx="250" cy="560" r="15" class="port-inner" />
+  <polygon points="250,545 263,552 263,568 250,575 237,568 237,552" class="port-inner" /> <line x1="330" y1="510" x2="330" y2="610" class="accent-line" />
+
+  <text x="400" y="510" text-anchor="middle" class="text-label">GAS OUT</text>
+  <circle cx="400" cy="560" r="25" class="port-outer" />
+  <circle cx="400" cy="560" r="10" class="port-inner" />
+  <polygon points="400,550 409,555 409,565 400,570 391,565 391,555" class="port-inner" /> <text x="400" y="630" text-anchor="middle" class="text-label">GAS OUT</text>
+
+  <line x1="470" y1="510" x2="470" y2="610" class="accent-line" />
+
+  <circle cx="580" cy="495" r="12" fill="#ffffff" stroke="#212529" stroke-width="2"/>
+  <text x="580" y="506" text-anchor="middle" class="symbol">+</text>
+  
+  <circle cx="540" cy="560" r="35" class="port-outer" />
+  <circle cx="540" cy="560" r="15" class="port-inner" />
+  <polygon points="540,545 553,552 553,568 540,575 527,568 527,552" class="port-inner" /> <line x1="600" y1="595" x2="630" y2="595" stroke="#212529" stroke-width="5" stroke-linecap="round" />
+  <line x1="640" y1="595" x2="670" y2="595" stroke="#212529" stroke-width="5" stroke-linecap="round" />
+  <line x1="600" y1="610" x2="630" y2="610" stroke="#212529" stroke-width="5" stroke-linecap="round" />
+  <line x1="640" y1="610" x2="670" y2="610" stroke="#212529" stroke-width="5" stroke-linecap="round" />
+
+</svg>
