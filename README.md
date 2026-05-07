@@ -5,6 +5,10 @@
   <h3>The Autonomous, Grounded Hardware Diagnostic Engine.<br>A multi-modal infrastructure that teaches you to build for the physical world.</h3>
 
   <p>
+    <a href="https://prox.ashishsandhu.com/"><strong>🌐 Live Demo: prox.ashishsandhu.com</strong></a>
+  </p>
+
+  <p>
     <img src="https://img.shields.io/badge/Next.js_15-000000?style=flat&logo=next.js&logoColor=white" alt="Next.js">
     <img src="https://img.shields.io/badge/Claude-D97757?style=flat&logo=anthropic&logoColor=white" alt="Claude">
     <img src="https://img.shields.io/badge/Gemini-4285F4?style=flat&logo=google&logoColor=white" alt="Gemini">
@@ -16,10 +20,10 @@
 
   <br>
 
-  <!-- HERO MEDIA PLACEHOLDER -->
+  <!-- HERO MEDIA -->
   <div align="center">
-    <img src="https://via.placeholder.com/1200x600.png?text=VULCAN-OS+HERO+DEMO+VIDEO/GIF" alt="Vulcan-OS Hero Demo" width="100%" style="border-radius: 16px;">
-    <p><em>[REPLACE: Link to a 30s-60s video or GIF showing the hands-free diagnostic flow]</em></p>
+    <video src="public/images/hero-demo.mp4" width="100%" style="border-radius: 16px;" autoplay loop muted playsinline></video>
+    <p><em>[High-fidelity hands-free diagnostic flow]</em></p>
   </div>
 
   <br>
@@ -139,8 +143,8 @@ Vulcan-OS uses a layered reliability model to ensure garage-side stability:
 <div align="center">
   <table>
     <tr>
-      <td width="50%"><img src="https://via.placeholder.com/600x400.png?text=TOPOLOGY+ENGINE+GIF" alt="Topology Demo"><br><em>[Digital Twin Topology Engine]</em></td>
-      <td width="50%"><img src="https://via.placeholder.com/600x400.png?text=VISION+ANALYSIS+SCREENS" alt="Vision Demo"><br><em>[Multi-Modal Vision Audit]</em></td>
+      <td width="50%"><img src="public/images/topology-demo.gif" alt="Topology Demo"><br><em>[Digital Twin Topology Engine]</em></td>
+      <td width="50%"><img src="public/images/vision.png" alt="Vision Demo"><br><em>[Multi-Modal Vision Audit]</em></td>
     </tr>
   </table>
 </div>
@@ -224,8 +228,8 @@ Run these test queries to confirm calibration:
 
 <!-- UI GALLERY PLACEHOLDER -->
 <div align="center">
-  <img src="https://via.placeholder.com/1200x500.png?text=INTERFACE+STITCH+GALLERY" alt="Vulcan-OS Interface" width="100%" style="border-radius: 16px;">
-  <p><em>[REPLACE: Screenshot showing the split-pane Chat and Canvas interface]</em></p>
+  <img src="public/images/interface.png" alt="Vulcan-OS Interface" width="100%" style="border-radius: 16px;">
+  <p><em>[Screenshot showing the split-pane Chat and Canvas interface]</em></p>
 </div>
 
 The app is built as a support cockpit:
@@ -253,7 +257,7 @@ I am an **AI Infrastructure Engineer** and 2x founder. I treat LLMs as **Recursi
 <p>
   <a href="https://linkedin.com/in/ashishsandhu"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="https://x.com/ashishsandhu"><img src="https://img.shields.io/badge/X-000?style=for-the-badge&logo=x&logoColor=white" alt="X"></a>
-  <a href="mailto:hi@scholarsaver.co.uk"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="mailto:ashishkumarsandhu@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
 </p>
 
 ---
