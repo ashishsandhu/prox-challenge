@@ -56,6 +56,6 @@ export function getFastModel() {
 export function getModelCapabilities(): ModelCapabilities {
   if (process.env.ANTHROPIC_API_KEY) return { supportsVision: true,  provider: 'anthropic' }
   if (process.env.GOOGLE_API_KEY)    return { supportsVision: true,  provider: 'google'    }
-  if (process.env.GROQ_API_KEY)      return { supportsVision: false, provider: 'groq'      }
+  if (process.env.GROQ_API_KEY)      return { supportsVision: true,  provider: 'groq'      }
   throw new Error('No API key found.')
 }

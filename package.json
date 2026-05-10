@@ -19,6 +19,7 @@
     "@anthropic-ai/claude-agent-sdk": "^0.1.77",
     "@anthropic-ai/sdk": "^0.62.0",
     "@google/genai": "^1.52.0",
+    "@vercel/analytics": "^2.0.1",
     "ai": "^6.0.175",
     "framer-motion": "^12.38.0",
     "groq-sdk": "^1.1.2",

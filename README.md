@@ -58,7 +58,7 @@ graph TD
     
     Registry --> Reasoning{Tier 1: Reasoning}
     Manual --> Reasoning
-    Reasoning -->|Deep Logic| Claude[Claude 3.5 Sonnet / Gemini Pro]
+    Reasoning -->|Deep Logic| Claude[Claude 4.6 Opus / Gemini 3.1 Pro]
     
     Claude -->|Visual Spec| Workspace[Diagnostic Workspace]
     Workspace -->|Render| Topology[Digital Twin Topology]
@@ -210,13 +210,31 @@ Built for "Gloves-On" utility, VO optimizes for **Latency-to-Action**.
 
 ### 1. Installation
 ```bash
+# Clone and enter repo
 git clone https://github.com/ashishsandhu/vulcan-os.git
 cd vulcan-os
+
+# Install dependencies (Node.js >= 20.9.0 required)
 npm install
+
+# Setup environment
 cp .env.example .env
+
+# Launch the engine
+npm run dev
 ```
 
-### 2. Verification Lab
+> [!TIP]
+> **One-Key Power**: You only need **one** API key (Groq or Google) to unlock both the reasoning engine and the voice transcription system.
+
+### 2. Configure Environment Variables
+You only need **one** LLM provider key to boot the system. Groq and Google are "one-key" solutions that handle both reasoning and transcription:
+- **Groq (One-Key Ready)**: Ultra-low latency reasoning + **Vision support** + built-in Whisper transcription.
+- **Google / Gemini (One-Key Ready)**: High-performance **Reasoning** + **Vision support** + built-in audio transcription.
+- **Anthropic (Primary)**: Best-in-class reasoning and **optimized vision** (requires Groq/Google/OpenAI for transcription fallback).
+- **ElevenLabs / Fish Audio**: Required only if you want voice synthesis enabled.
+
+### 3. Verification Lab
 Run these test queries to confirm calibration:
 - **Duty Cycle**: `What's the duty cycle for 200A on 240V?`
 - **Polarity**: `How do I wire for TIG?`

@@ -1358,7 +1358,7 @@ User question: ${question}`;
       .filter((block): block is Anthropic.TextBlock => block.type === "text")
       .map((block) => block.text)
       .join("\n");
-  } else {
+  } else if (process.env.GOOGLE_API_KEY) {
     const { GoogleGenAI } = require("@google/genai");
     const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
     const response = await ai.models.generateContent({
@@ -1369,6 +1369,28 @@ User question: ${question}`;
         ]
     });
     text = response.text;
+  } else {
+    const Groq = require("groq-sdk");
+    const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+    const response = await groq.chat.completions.create({
+      model: "meta-llama/llama-4-scout-17b-16e-instruct",
+      messages: [
+        {
+          role: "user",
+          content: [
+            { type: "text", text: prompt },
+            {
+              type: "image_url",
+              image_url: {
+                url: `data:${mediaType};base64,${imageData}`
+              }
+            }
+          ]
+        }
+      ],
+      temperature: 0.1,
+    });
+    text = response.choices[0]?.message?.content || "";
   }
   const parsed = extractJson(text) as AgentResponse["imageDiagnosis"] | undefined;
   if (!parsed) {

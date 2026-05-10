@@ -34,7 +34,37 @@ export async function POST(req: Request) {
     }
   }
 
-  // Fallback: OpenAI Whisper
+  // Fallback 1: Google Gemini (if GOOGLE_API_KEY is present)
+  const googleKey = process.env.GOOGLE_API_KEY
+  if (googleKey) {
+    try {
+      const { GoogleGenAI } = await import('@google/genai')
+      const genAI = new GoogleGenAI({ apiKey: googleKey })
+      
+      const buffer = await audio.arrayBuffer()
+      const result = await genAI.models.generateContent({
+        model: 'gemini-3-flash-preview',
+        contents: [
+          {
+            inlineData: {
+              data: Buffer.from(buffer).toString('base64'),
+              mimeType: 'audio/webm'
+            }
+          },
+          { text: 'Transcribe this audio. Return ONLY the transcription text, nothing else.' }
+        ]
+      })
+      
+      const text = (result.text ?? '').trim()
+      if (text) {
+        return NextResponse.json({ text })
+      }
+    } catch (e) {
+      console.warn('[transcribe] Google Gemini failed:', e)
+    }
+  }
+
+  // Fallback 2: OpenAI Whisper
   if (openaiKey) {
     try {
       const form = new FormData()
